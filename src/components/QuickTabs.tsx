@@ -1,6 +1,6 @@
 
 import { useState } from 'react';
-import { FireIcon, TrendingUpIcon, MoneyBag02Icon, Sun01Icon, SparklesIcon, Clock04Icon } from '@hugeicons/react';
+import { Fire02Icon, TrendingUpIcon, MoneyBag02Icon, Sun01Icon, Sparkles02Icon, Clock04Icon } from '@hugeicons/react';
 
 const QuickTabs = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -10,7 +10,7 @@ const QuickTabs = () => {
       id: 0,
       title: 'Hot Selling',
       bengaliTitle: 'হট সেলিং',
-      icon: FireIcon,
+      icon: Fire02Icon,
       color: 'from-red-500 to-orange-500'
     },
     {
@@ -38,7 +38,7 @@ const QuickTabs = () => {
       id: 4,
       title: 'New Arrived',
       bengaliTitle: 'নিউ এরাইভড',
-      icon: SparklesIcon,
+      icon: Sparkles02Icon,
       color: 'from-purple-500 to-indigo-500'
     },
     {

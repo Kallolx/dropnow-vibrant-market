@@ -3,10 +3,10 @@ import {
   SmartPhone01Icon, 
   Mail01Icon, 
   Location01Icon, 
-  FacebookIcon, 
-  InstagramIcon, 
-  TwitterIcon, 
-  YoutubeIcon 
+  Facebook02Icon, 
+  Instagram01Icon, 
+  Twitter01Icon, 
+  Youtube01Icon 
 } from '@hugeicons/react';
 
 const Footer = () => {
@@ -31,16 +31,16 @@ const Footer = () => {
             
             <div className="flex space-x-4">
               <a href="#" className="p-2 bg-primary-600 hover:bg-yellow-500 rounded-full transition-colors duration-300">
-                <FacebookIcon size={20} />
+                <Facebook02Icon size={20} />
               </a>
               <a href="#" className="p-2 bg-primary-600 hover:bg-yellow-500 rounded-full transition-colors duration-300">
-                <InstagramIcon size={20} />
+                <Instagram01Icon size={20} />
               </a>
               <a href="#" className="p-2 bg-primary-600 hover:bg-yellow-500 rounded-full transition-colors duration-300">
-                <TwitterIcon size={20} />
+                <Twitter01Icon size={20} />
               </a>
               <a href="#" className="p-2 bg-primary-600 hover:bg-yellow-500 rounded-full transition-colors duration-300">
-                <YoutubeIcon size={20} />
+                <Youtube01Icon size={20} />
               </a>
             </div>
           </div>
