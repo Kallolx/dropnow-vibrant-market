@@ -1,93 +1,37 @@
-
 import { useState } from 'react';
-import { Fire02Icon, TrendingUpIcon, MoneyBag02Icon, Sun01Icon, Sparkles02Icon, Clock04Icon } from '@hugeicons/react';
+import { motion } from 'framer-motion';
 
 const QuickTabs = () => {
   const [activeTab, setActiveTab] = useState(0);
 
   const tabs = [
-    {
-      id: 0,
-      title: 'Hot Selling',
-      bengaliTitle: 'হট সেলিং',
-      icon: Fire02Icon,
-      color: 'from-red-500 to-orange-500'
-    },
-    {
-      id: 1,
-      title: 'Ready to Boost',
-      bengaliTitle: 'রেডি টু বুস্ট',
-      icon: TrendingUpIcon,
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      id: 2,
-      title: 'Profitable Products',
-      bengaliTitle: 'প্রফিটেবল প্রোডাক্ট',
-      icon: MoneyBag02Icon,
-      color: 'from-yellow-500 to-amber-500'
-    },
-    {
-      id: 3,
-      title: 'Summer Products',
-      bengaliTitle: 'সামার প্রোডাক্ট',
-      icon: Sun01Icon,
-      color: 'from-cyan-500 to-blue-500'
-    },
-    {
-      id: 4,
-      title: 'New Arrived',
-      bengaliTitle: 'নিউ এরাইভড',
-      icon: Sparkles02Icon,
-      color: 'from-purple-500 to-indigo-500'
-    },
-    {
-      id: 5,
-      title: 'Limited Offer',
-      bengaliTitle: 'লিমিটেড অফার',
-      icon: Clock04Icon,
-      color: 'from-pink-500 to-rose-500'
-    }
+    { id: 0, bengaliTitle: 'হট সেলিং', color: 'bg-red-700' },
+    { id: 1, bengaliTitle: 'রেডি টু বুস্ট', color: 'bg-purple-500' },
+    { id: 2, bengaliTitle: 'প্রফিটেবল প্রোডাক্ট', color: 'bg-yellow-500' },
+    { id: 3, bengaliTitle: 'সামার প্রোডাক্ট', color: 'bg-green-500' },
+    { id: 4, bengaliTitle: 'নিউ এরাইভড', color: 'bg-purple-500' },
+    { id: 5, bengaliTitle: 'লিমিটেড অফার', color: 'bg-gray-500' }
   ];
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-8">
       <div className="max-w-7xl mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-800 font-dm-sans mb-4">
-            Quick Categories
-          </h2>
-          <p className="text-lg text-gray-600 font-anek-bangla">
-            দ্রুত পণ্য খুঁজে নিন আমাদের বিশেষ ক্যাটাগরি থেকে
-          </p>
-        </div>
-
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-          {tabs.map((tab) => {
-            const IconComponent = tab.icon;
-            return (
-              <button
-                key={tab.id}
-                onClick={() => setActiveTab(tab.id)}
-                className={`group relative overflow-hidden rounded-2xl p-6 text-center transition-all duration-300 hover:scale-105 ${
-                  activeTab === tab.id ? 'ring-4 ring-primary-500 shadow-xl' : 'shadow-lg hover:shadow-xl'
-                }`}
-              >
-                <div className={`absolute inset-0 bg-gradient-to-br ${tab.color} opacity-90`} />
-                <div className="relative z-10">
-                  <div className="mb-3 flex justify-center">
-                    <IconComponent size={32} className="text-white" />
-                  </div>
-                  <h3 className="text-white font-dm-sans font-semibold text-sm mb-1">
-                    {tab.title}
-                  </h3>
-                  <p className="text-white/90 font-anek-bangla text-xs">
-                    {tab.bengaliTitle}
-                  </p>
-                </div>
-              </button>
-            );
-          })}
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
+          {tabs.map((tab) => (
+            <motion.button
+              key={tab.id}
+              onClick={() => setActiveTab(tab.id)}
+              className={`group flex items-center justify-center rounded-xl p-8 text-white ${tab.color}`}
+              whileHover={{ scale: 1.05 }}
+              transition={{ type: 'spring', stiffness: 400 }}
+            >
+              <div className="text-center">
+                <h3 className="font-anek-bangla font-semibold tracking-tighter text-2xl md:text-4xl">
+                  {tab.bengaliTitle}
+                </h3>
+              </div>
+            </motion.button>
+          ))}
         </div>
       </div>
     </section>

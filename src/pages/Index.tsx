@@ -9,17 +9,15 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
-      
-      <main>
-        {/* Hero Section */}
-        <section className="py-8 px-4 bg-gradient-to-br from-primary-50 to-yellow-50">
+            <main>
+        <section className="py-8 px-4 ">
           <div className="max-w-7xl mx-auto">
             <HeroSlider />
+            <QuickTabs />
           </div>
         </section>
 
         {/* Quick Tabs Section */}
-        <QuickTabs />
 
         {/* Dropship Collection Section */}
         <DropshipCollection />
